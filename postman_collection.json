@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Node User Server",
+    "_postman_id": "node-user-server-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all users",
+      "request": { "method": "GET", "url": "http://localhost:3055/api/users" }
+    },
+    {
+      "name": "Get user by id",
+      "request": { "method": "GET", "url": "http://localhost:3055/api/users/7" }
+    },
+    {
+      "name": "Add user",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"id\": 10, \"userName\": \"Alice\" }"
+        },
+        "url": "http://localhost:3055/api/users"
+      }
+    },
+    {
+      "name": "Update user",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"userName\": \"Alicia\" }"
+        },
+        "url": "http://localhost:3055/api/users/10"
+      }
+    },
+    {
+      "name": "Delete user",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3055/api/users/10"
+      }
+    },
+    {
+      "name": "Get logs",
+      "request": { "method": "GET", "url": "http://localhost:3055/api/logs" }
+    }
+  ]
+}
