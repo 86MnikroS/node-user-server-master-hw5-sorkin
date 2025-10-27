@@ -16,6 +16,7 @@ class MyLogger {
         const timestamp = new Date().toLocaleString();
         const entry = `${timestamp} - ${message}`;
         this.logs.push(entry);
+        console.log(entry);
 
         appendFileSync(this.logFile, entry + "\n", "utf8");
     }

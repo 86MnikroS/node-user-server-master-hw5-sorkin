@@ -6,3 +6,6 @@ emitter.on('user_added', () => {
 emitter.on('user_removed', () => {
     console.log('User removed');
 });
+emitter.on('user_updated', () => {
+    console.log('User was successfully updated');
+});
